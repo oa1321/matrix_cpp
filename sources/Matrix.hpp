@@ -3,7 +3,6 @@
 #include <iostream>
 #include <sstream>
 #include <fstream>
-using namespace std;
 
 namespace zich
 {
@@ -12,10 +11,10 @@ namespace zich
         public:
             int rows;
             int columns;
-            vector<double> matrix;
+            std::vector<double> matrix;
             Matrix();
             Matrix(int, int);
-            Matrix(const vector<double>& matrix , int rows, int columns);
+            Matrix(const std::vector<double>& matrix , int rows, int columns);
             Matrix(const Matrix&);
             ~Matrix();
             //basic plus and minus oprator and equals operator
@@ -54,7 +53,7 @@ namespace zich
             friend bool operator>=(const Matrix&, const Matrix&);
 
             //input and output operator
-            friend ostream& operator<<(ostream&, Matrix);
-            friend istream& operator>>(istream&, Matrix&);
+            friend std::ostream& operator<<(std::ostream&, Matrix);
+            friend std::istream& operator>>(std::istream&, Matrix&);
     };
 } 
